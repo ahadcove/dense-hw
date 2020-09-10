@@ -9,6 +9,8 @@ export const GET_DENSITY_SPACES = async (): Promise<ISpacesRes> => {
 			throw new Error('Invalid data');
 		}
 
+		// If there is a next we should recurse here passing in the next page each time until we get final results
+
 		return Promise.resolve(spacesRes.data);
 	} catch (err) {
 		return Promise.reject(err);
